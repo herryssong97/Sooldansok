@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+body {
+	padding-top: 20vh; /* 헤더의 높이와 동일한 값을 설정하여 헤더 아래로 내용이 시작되도록 함 */
+}
+
+button[type="button"] {
+	background-color: black;
+	color: white;
+	font-size: 16px;
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+	transition-duration: 0.4s;
+}
+
+button[type="button"]:hover {
+	background-color: gray;
+	color: black;
+}
+
+table {
+	width: 40%;
+	border-collapse: collapse;
+}
+
+table, th, td {
+	border: 1px solid black;
+}
+
+th, td {
+	padding: 10px;
+	text-align: center;
+}
+
+th {
+	background-color: #f3f3f3;
+	font-weight: normal;
+}
+
+.total-price {
+	font-weight: bold;
+}
+
+.free-shipping-info {
+	color: #888;
+	font-size: 0.75rem;
+}
+
+.order-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.order-form-container2 {
+	margin-top: 20px;
+	width: 40%;
+	display: flex;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.order-item-center {
+	justify-content: center;
+	margin-bottom: 100px;
+}

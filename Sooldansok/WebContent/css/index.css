@@ -1,0 +1,807 @@
+@charset "UTF-8";
+
+/* header 글씨 font-family: 'Diphylleia', serif; */
+@import
+	url('https://fonts.googleapis.com/css2?family=Diphylleia&display=swap')
+	;
+/* footer 글씨 font-family: 'SUITE-Regular';
+ --> 이게 깔끔해서 이걸로 하면 될듯! */
+@font-face {
+	font-family: 'SUITE-Regular';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2')
+		format('woff2');
+	font-weight: 300;
+	font-style: normal;
+	margin: 50px 0;
+}
+
+* {
+	text-decoration: none;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: #333;
+}
+
+a.white {
+	color: #fff;
+}
+
+p {
+	font-family: 'Diphylleia', serif;
+	line-height: 5vh;
+}
+
+body {
+	height: auto;
+}
+
+div.my_wrapper {
+	position: relative;
+	width: 100%;
+	/* margin: auto; */
+	height: auto;
+	min-height: 100%;
+	margin-bottom: 200px;
+	margin-top: 20vh;
+	display: block;
+}
+
+/* login시 header 보였다 안보였다 */
+.display_none {
+	display: none;
+}
+
+.display_block {
+	display: block;
+}
+
+header {
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	width: 100%;
+	height: 15vh;
+	background-color: #000;
+	font-family: 'Diphylleia', serif; /* 폰트설정 */
+}
+
+h1 {
+	font-size: 30px;
+	padding-top: 50px;
+	text-align: center;
+	height: auto;
+	font-weight: normal;
+	color: #fff;
+}
+
+/*//////////////////////////////*/
+nav {
+	position: fixed;
+	z-index: 3;
+	top: 15vh;
+	margin: auto;
+	width: 100%;
+	background-color: #000;
+	line-height: 5vh;
+	font-family: 'Diphylleia', serif; /* 폰트설정 */
+}
+
+ul#menu_box {
+	min-width: 700px;
+	display: flex;
+	height: 5vh;
+	width: 40vw;
+	margin: auto;
+}
+
+ul#menu_box>li.t_menu {
+	position: relative;
+	z-index: 1; /* 배너보다 위 쪽으로 */
+	margin: auto;
+	text-align: center;
+}
+
+ul#menu_box>li.t_menu {
+	float: left;
+	margin: auto;
+	cursor: pointer;
+	color: #fff;
+	width: 100%;
+}
+
+ul#menu_box>li.t_menu>ul.s_menu {
+	position: absolute; /* 포지션 줘야 부모 기준으로 left10% */
+	width: 80%;
+	left: 10%; /* 넓이 80%줬으니 왼쪽 10% 줘서 중앙정렬 */
+	border-radius: 0 15px 0 15px; /* 상좌 상우 하우 하좌 */
+	background-color: #f8f8f8;
+	color: #333;
+	/* outline : 0.1px solid #c0c0c0; */
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+}
+
+/*상단 메뉴바 오버시 글자에 색바뀌는듯 부드럽게 효과주려면 트렌지션 필수
+	지금은 딱히.. 걍 해둠 혹시 머 쓸까바*/
+ul#menu_box>li.t_menu:hover {
+	transition: all 0.3s ease-in-out;
+}
+
+/* 처음에 하단메뉴 안보이게 */
+ul.s_menu>li {
+	display: none;
+}
+
+/* 오버시 하단 메뉴 색전환 부드럽게 효과~.. 이것도 그냥 적어둠 헷갈리면 지워도 ㄱㅊ*/
+ul.s_menu>li:hover {
+	font-weight: 700;
+	transition: all 0.3s ease-out;
+}
+
+/*/로그인 회원가입 : div.lj_line/////////////////////////////*/
+div.lj_line {
+	position: absolute;
+	color: #fff;
+	width: 300px;
+	left: 80%;
+	line-height: 5vh;
+	top: 0;
+	cursor: pointer;
+	font-size: 13px;
+	display: flex;
+}
+
+div.lj_line>a {
+	width: auto;
+	float: left;
+	padding-right: 15px;
+}
+
+div.lj_line>a:last-child {
+	padding-right: 0;
+}
+
+div.lj_line>span:hover {
+	font-weight: bold;
+}
+
+#_rgetid {
+	line-height: 3vh;
+	font-family: 'SUITE-Regular';
+	font-size: 12px;
+}
+
+/* 문의사항 작성폼 ////////////////////////////*/
+div.qFrm_bx {
+	height: 60vh;
+	/* display: flex; */
+	width: 60vw;
+	font-family: 'SUITE-Regular';
+	margin: auto;
+}
+
+form#qFrm {
+	width: 100%;
+	/* margin: 0 auto; */
+	padding: 20px;
+	border-radius: 5px;
+}
+
+div.qFrm_table {
+	width: 100%;
+}
+
+div.qFrm_table>ul {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+div.qFrm_table>ul>li {
+	float: left;
+}
+
+div.qFrm_table>ul>li:first-child {
+	width: 100px;
+	line-height: 30px;
+}
+
+div.qFrm_table>ul>li:nth-child(2) {
+	width: 90%;
+}
+
+b.qFrm_tit, b.qFrm_con {
+	width: 100px;
+	line-height: 40px;
+	font-size: 20px;
+}
+
+input.qFrm_input {
+	line-height: 30px;
+}
+
+textarea.qFrm_tarea {
+	line-height: 30px;
+	height: 300px;
+}
+
+input.qFrm_input, textarea.qFrm_tarea {
+	width: 100%;
+	padding: 3px;
+	resize: none;
+	border: 1px solid #bbb;
+	font-family: 'SUITE-Regular';
+	font-size: 15px;
+}
+
+div.qFrm_btns {
+	margin: auto;
+	float: right;
+	width: 250px;
+	height: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+div.qFrm_btns>input {
+	width: 100px;
+	height: 30px;
+	margin: auto;
+	float: right;
+}
+
+div.qFrm_btns_qsinsert {
+	margin: auto;
+	float: right;
+	width: 100px;
+	height: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+div.qFrm_btns_qsinsert>input {
+	width: 100px;
+	height: 30px;
+	margin: auto;
+	float: right;
+}
+
+/* 카카오로그인 버튼 /////////////////////////////*/
+img.kkao_sink {
+	width: 200px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+	cursor: pointer;
+}
+
+/*/로그인 모달 : .login_modal 회원가입 모달 :  .join_modal /////////////////////////////*/
+form.join, form.login {
+	padding: 50px 0 180px 0;
+	margin: auto;
+}
+
+form.login {
+	width: 200px;
+}
+
+form.join {
+	width: 300px;
+}
+
+#fn_checkId {
+	float: right;
+	margin-top: 5px;
+}
+
+.in {
+	width: 200px;
+	line-height: 30px;
+	margin: 10px 5px 10px 0px;
+}
+
+.email1 {
+	width: 80px
+}
+
+.email2 {
+	width: 110px;
+	height: 34px;
+}
+
+div.modal_btn {
+	display: flex;
+	width: 200px;
+	height: auto;
+	margin: auto;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+div.modal_join_btn {
+	display: flex;
+	width: 200px;
+	height: auto;
+	margin: auto;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	position: absolute;
+}
+/* 회원가입에서 중복확인 텍스트 부분 */
+p#p {
+	width: 200px;
+	height: 20px;
+	margin: 10px 0;
+	font-size: 13px;
+	font-weight: bold;
+	font-family: 'SUITE-Regular';
+}
+
+p.red {
+	color: red;
+}
+
+p.green {
+	color: green;
+}
+
+/* 회원가입에서 중복확인 텍스트 부분 */
+p#p, p#p2, p#p3 {
+	position: absolute;
+	line-height: 30px;
+	margin-left: 210px;
+	width: 200px;
+	height: 20px;
+	margin: 10px 0 10px 210px;
+	font-size: 13px;
+	font-weight: bold;
+	font-family: 'SUITE-Regular';
+}
+
+p.red {
+	color: red;
+	display: block;
+}
+
+p.green {
+	color: green;
+	display: block;
+}
+
+/* 로그인, 회원가입 버튼 */
+.m_login_btn, .join, .m_id_btn {
+	width: 200px;
+}
+/* 아이디,비번찾기, 가입하기, 취소 버튼 */
+.half {
+	width: 90px;
+}
+/* 로그인, 아이디찾기, 비번찾기, 회원가입 전체 버튼 */
+.in_btn {
+	float: left;
+	height: 30px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+/* 중복확인 버튼 */
+input.check_id {
+	float: right;
+	width: 100px;
+	height: 30px;
+}
+
+/*/banner/////////////////////////////*/
+ul.bxslider>li>img {
+	width: 100vw; /* 배경 이미지 반응형위해 %로 안주고 vw */
+}
+
+ul.bxslider>li::after { /* 배경 사진 위에 0.5 반투명 가상요소 */
+	content: "";
+	opacity: 0.5;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-color: #000;
+}
+
+/*/중앙 버튼/////////////////////////////*/
+div.centerBtn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+}
+
+div.centerBtn>ul>li {
+	float: left;
+}
+
+.btn {
+	cursor: pointer;
+	display: inline-block;
+	background: transparent;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 0.625rem;
+	letter-spacing: 0.3em;
+	color: rgba(223, 190, 106, 0.7);
+	border-radius: 0;
+	padding: 18px 80px 20px;
+	transition: all 0.7s ease-out;
+	background: linear-gradient(270deg, rgba(223, 190, 106, 0.8),
+		rgba(146, 111, 52, 0.8), rgba(34, 34, 34, 0), rgba(34, 34, 34, 0));
+	background-position: 1% 50%;
+	background-size: 300% 300%;
+	text-decoration: none;
+	margin: 0.625rem;
+	border: none;
+	border: 1px solid rgba(223, 190, 106, 0.3);
+}
+
+.btn:hover {
+	color: #fff;
+	border: 1px solid rgba(223, 190, 106, 0);
+	color: #fff;
+	background-position: 99% 50%;
+}
+
+/*/modal/////////////////////////////*/
+.close, #rv_close {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	color: #555;
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+	border: none; /* 버튼 모양 없애기 */
+	background-color: #eee;
+}
+
+#modal {
+	position: absolute;
+	width: 100%;
+	height: 100%; /* background: rgba(0,0,0,0.6);  */
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 5;
+	font-size: 15px;
+	font-family: 'SUITE-Regular';
+}
+
+.modal_content {
+	width: 400px;
+	height: auto;
+	background: #eee;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -200px;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 74px 0;
+	line-height: 23px; /* cursor:pointer; */
+}
+
+/* 리뷰 모달 /////////////////////////////*/
+div.rv_modal_content {
+	width: 50vw;
+	height: auto;
+	font-family: 'SUITE-Regular';
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: 0;
+	transform: translate(-50%, -50%);
+	/* margin-top:-100px; margin-left:-200px; */
+	text-align: center;
+	box-sizing: border-box;
+	padding: 74px 0;
+	line-height: 23px; /* cursor:pointer; */
+}
+
+div.rv_modal_content>ul {
+	width: 45vw;
+	height: auto;
+	font-size: 15px;
+	margin: auto;
+}
+
+div.rv_modal_content>ul>li {
+	width: 100%;
+	float: left;
+	line-height: 5vh;
+}
+
+div.rv_modal_content>ul>li:first-child {
+	
+}
+/* 리뷰 모달 이미지 */
+div.rv_modal_content>ul>li:nth-child(2) {
+	
+}
+
+div.rv_modal_content>ul>li>img {
+	width: 100%;
+}
+
+/* 리뷰 모달 내용 */
+div.rv_modal_content>ul>li:nth-child(3) {
+	
+}
+
+/*/footer/////////////////////////////*/
+footer {
+	position: absolute;
+	transform: translateY(-100%);
+	width: 100%;
+	height: 200px;
+	display: block;
+	background-color: #111;
+	color: #666;
+}
+
+dl.foot_info {
+	border-left: 2px solid #222;
+	width: 18vw;
+	float: right;
+	font-family: 'SUITE-Regular';
+	padding-left: 35px;
+	margin-top: 15px;
+}
+
+dl>dt.foot_info {
+	font-weight: 900;
+	line-height: 50px;
+	font-size: 17px;
+}
+
+footer>dl>dd.foot_info {
+	line-height: 20px;
+	font-size: 15px;
+	padding-bottom: 10px;
+}
+
+footer>.foot_copy {
+	position: absolute;
+	font-size: 17px;
+	bottom: 10px;
+	left: 20px;
+	font-size: 13px;
+}
+
+.s_title {
+	width: 100%;
+	position: absolute;
+	top: 3.8%;
+	font-weight: 600;
+	font-size: 23px;
+	text-align: center;
+}
+
+.clientsum {
+	width: 101px;
+	position: absolute;
+	top: 7.5%;
+	right: 10%;
+	font-size: 12.5px;
+	text-align: right;
+}
+
+.cl_info {
+	position: absolute;
+	top: 10%;
+	left: 20%;
+	width: 60%;
+	height: 49%;
+	border-right: none;
+	border-left: none;
+	border-bottom: 1px solid #000;
+	border-collapse: collapse;
+	border-top: none;
+}
+
+.cl_info th, .cl_info td, .myod_list th, .myod_list td {
+	border-top: 1px solid #000;
+	border-bottom: none;
+	border-right: none;
+	border-left: none;
+	padding: 8px 0;
+	font-size: 17px;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.col {
+	width: 20%;
+	padding: 2% 0%;
+	font-weight: bold;
+	height: 7vh;
+}
+
+.input_info {
+	width: 80%;
+	padding: 1% 0%;
+	height: 7vh;
+}
+
+.updat_id {
+	vertical-align: -webkit-baseline-middle;
+	padding-left: 6px;
+}
+
+.clinfo_text {
+	width: 100%;
+	font-size: 16px;
+	height: 100%;
+}
+
+.cl_li_btn_row {
+	position: absolute;
+	top: 63%;
+	width: 100%;
+	text-align: center;
+}
+
+.cl_li_btn, .pd_in_btn1, .pd_in_btn2 {
+	margin: 1%;
+	font-size: 16px;
+	font-weight: bold;
+	border: solid 2px #333;
+	border-radius: 30px;
+	color: #fff;
+	background-color: #333;
+	cursor: pointer;
+	width: 9vw;
+	height: 5vh;
+}
+
+.cl_list {
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+	border-bottom: 1px solid #000;
+	border-collapse: collapse;
+	margin-top: 52px;
+}
+
+.rv_col11 {
+	width: 6%;
+}
+
+.rv_col22 {
+	width: 23%;
+}
+
+.rv_col44 {
+	width: 65%;
+}
+
+.rv_col55 {
+	width: 6%;
+}
+
+.pagination .active a {
+	color: orange;
+	font-weight: bold;
+}
+
+.pagination {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.pagination li {
+	margin-right: 10px; /* 각 항목 사이의 우측 여백을 10px로 설정합니다. */
+}
+
+.pages {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	top: 556px;
+	width: 50%;
+	left: 25%;
+}
+
+.id-info span {
+	display: inline-block;
+	margin-left: 57px; /* 적절한 공백 크기로 조정 */
+}
+
+.birth-info span {
+	display: inline-block;
+	margin-left: 43px; /* 적절한 공백 크기로 조정 */
+}
+
+.ordersum {
+	width: 101px;
+	position: absolute;
+	top: 46.8%;
+	right: 19.5vw;
+	font-size: 12.5px;
+	text-align: right;
+}
+
+/* id찾기 페이지 ////////////////////////////*/
+div.find_id_bx, div.find_pw_bx {
+	width: 60vw;
+	text-align: center;
+	margin: auto;
+	height: auto;
+	min-height: 450px;
+	padding: 50px 0;
+}
+
+div.find_pw_bx {
+	padding: 50px 0 120px 0;
+}
+
+div.find_id_bx>p {
+	padding: 50px 0 120px 0;
+}
+
+/* 공지사항///////////////// */
+.notice_board {
+	width: 880px;
+	border-collapse: collapse;
+	table-layout: fixed; /* 테이블의 너비와 높이를 고정 */
+}
+
+.notice_board th {
+	height: 50px;
+	background-color: #f5f5f5;
+}
+
+.notice_board td {
+	height: 400px;
+	white-space: pre-wrap;
+	text-overflow: unset;
+	word-wrap: break-word;
+}
+
+div .notice_div_admin {
+	width: 900px;
+	position: absolute;
+	bottom: -465px;
+	overflow: auto;
+	left: 19%;
+}
+
+.ntd_col1 {
+	width: 10%;
+	text-align: left;
+	padding-top: 10px;
+}
+
+.ntd_col2 {
+	width: 75%;
+	text-align: justify;
+	padding-top: 5px;
+}
+
+.ntd_col3 {
+	width: 15%;
+	text-align: right;
+	padding-top: 10px;
+}
