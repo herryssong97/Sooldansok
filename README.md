@@ -2,6 +2,7 @@
 개요 : Servlet으로 와인전용사이트를 제작한다.
 
 Sooldansok.zip : 프로젝트 시연 영상
+Sooldansok folder : 프로젝트 소스
 
 역할
 - 전체적인 디자인 설계 및 구현
