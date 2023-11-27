@@ -52,8 +52,8 @@ MVC 2 모델 기반 와인 전문 쇼핑몰 웹 사이트를 만드는 프로젝
 ### 기간 : 2023.6.13 ~ 2023.7.07
 
 # 📌 팀 소개
+![People]
 <img src="https://github.com/ProjectGroup5/Sooldansok/assets/131237772/cd8514e0-56d9-4bd2-956c-7c6f43955fe6"/>
-![people](https://github.com/ProjectGroup5/Sooldansok/assets/131237772/cd8514e0-56d9-4bd2-956c-7c6f43955fe6)
 
 
 ### 백엔드 및 프론트엔드
@@ -108,8 +108,9 @@ MVC 2 모델 기반 와인 전문 쇼핑몰 웹 사이트를 만드는 프로젝
 
 <br/>
 
+![ERD]
+<img src="https://github.com/ProjectGroup5/Sooldansok/assets/131237772/095faf0d-a0ed-46f5-8ac8-e9618cdfcacc"/>
 
-![ERD](https://github.com/ProjectGroup5/Sooldansok/assets/131237772/095faf0d-a0ed-46f5-8ac8-e9618cdfcacc)
 
 
 
